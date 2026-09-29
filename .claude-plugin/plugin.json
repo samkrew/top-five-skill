@@ -1,0 +1,14 @@
+{
+  "name": "top-five-skill",
+  "version": "1.0.0",
+  "description": "NVIDIA-inspired Top-5 operational protocol for engineering leaders and AI agents. Enforces bandwidth flattening, ruthless priority forcing with trade-offs, and edge weak-signal detection.",
+  "author": {
+    "name": "Sam Krew",
+    "url": "https://github.com/samkrew"
+  },
+  "repository": "https://github.com/samkrew/top-five-skill",
+  "license": "Unlicense",
+  "skills": [
+    "./skills/"
+  ]
+}
