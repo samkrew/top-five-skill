@@ -1,50 +1,56 @@
 # Top-5 Quality Assessment Rubric & Diagnostic Guide
 
-Use this rubric to audit, grade, and calibrate Top-5 reports across engineering teams, sub-agents, or leadership pods.
+Use this rubric to audit, grade, and calibrate Top-5 reports across engineering, product, operations, sales, legal, and leadership pods.
 
 ---
 
-## 🎯 1. Detailed Scoring Rubric (Scale 1–5)
+## 🎯 1. Scoring Methodology (Deduction-Based from 5.0)
 
-### Score 5: Executive Grade (Mastery)
-- **Part 1 (Priorities):** Exactly 5 priorities. Every priority pairs an **Action** with a **Quantifiable Outcome** (latency, throughput, revenue, error rates). Every priority explicitly documents the **Trade-off / What Dropped Off**.
-- **Part 2 (Blockers):** Ranked strictly by blast radius. Each blocker identifies a named person or entity holding the dependency and includes exact days stalled.
-- **Part 3 (Escalations):** Contains a binary decision request directed to a named executive with a strict expiration timestamp and explicit cost of inaction.
-- **Part 4 (Horizon-3 Radar):** High-signal, empirical anomaly or frontier development. Strictly demarcates `[OBSERVED FACT]` from `[INFERENCE]`. Passes the Swap Test with 100% uniqueness.
+Every Top-5 begins at **Score 5.0**. Deductions are applied mechanically based on objective defects.
 
-### Score 4: Operational Grade
-- All 4 parts are present.
-- Priorities have clear outcomes, but trade-offs are qualitative rather than quantified (e.g. "delayed refactoring" instead of "postponed UTA-8790 sprint scope").
-- Blockers have named owners, but days stalled may be approximate.
-- Escalation is clear but missing hard expiration deadline.
-- Part 4 contains an interesting observation, though somewhat expected.
-
-### Score 3: Adequate (Needs Refinement)
-- 3 of 4 parts present (usually Part 4 is omitted or Part 1 trade-offs are missing).
-- Priorities describe ongoing effort ("continued development of service X") rather than completed empirical milestones.
-- Blocker is vague regarding ownership (e.g., "waiting on DevOps" rather than "waiting on Andrew Smirnykh for GKE cluster access").
-- Escalation request is soft ("we should sync on this").
-
-### Score 2: Defective (Action Required)
-- Laundry list behavior: >5 items or <3 items without justification.
-- Pure activity reporting: commits made, PRs opened, meetings held. Zero measured business or system deltas.
-- No trade-offs disclosed.
-- Blocker is a passive grievance without a path to resolution.
-- Part 4 contains rehashed marketing news or corporate announcements.
-
-### Score 1: Status Theater (Unacceptable)
-- Complete failure of the protocol.
-- Narrative prose, polite filler, excuse-making, or empty cheerleading.
-- Fails the Swap Test completely: the entire report could belong to any arbitrary company without modification.
+### Score Thresholds
+- **Score 5 (Executive Grade):** All 4 parts complete. All 5 priorities have quantified outcomes (or explicit `[UNALLOCATED CAPACITY]` markings) and verified trade-offs. Blockers cite individual named owners and days stalled (or honest justified absence). Escalations are binary with deadlines and cost of inaction (or honest justified absence). Part 4 separates `[OBSERVED FACT]` from `[INFERENCE]` with validation plan (or honest justified absence).
+- **Score 4 (Operational Grade):** All 4 parts present and valid. Priorities have clear outcomes, trade-offs are explicit. Blockers have named owners. Escalations are binary. Minor evidence gaps marked as `[SELF-ATTESTED]`. Delivery permitted.
+- **Score $\le 3$ (Failed Gate / Delivery Blocked):** Incomplete fields, missing trade-offs, vague blocker owners ("waiting on team"), or passive complaints. The draft is returned with actionable remediation notes. Maximum 2 remediation rounds permitted.
 
 ---
 
-## 🔍 2. Diagnostic Checklist (Audit Questions)
+## ⚖️ 2. The Honest Absence Rule (Zero Penalty)
 
-When reviewing a Top-5 submission, ask these 5 binary questions:
+To eliminate the incentive for employees to fabricate content, **honest and justified absence of blockers, escalations, or weak signals is fully compliant**:
 
-1. **The Capacity Invariant:** *Did the author state what work was dropped or rejected to accomplish the top 5?* (If No $\rightarrow$ Deduct 1 point).
-2. **The Swap Test:** *Can any of these bullets be copied into a competitor's report without sounding fake?* (If Yes $\rightarrow$ Reject bullet).
-3. **The Accountability Gate:** *Is there an explicit name attached to every blocker and escalation?* (If No $\rightarrow$ Deduct 1 point).
-4. **The Time-Box Gate:** *Does the escalation have a concrete calendar deadline and cost of inaction?* (If No $\rightarrow$ Deduct 1 point).
-5. **The Frontier Sensor:** *Does Part 4 reveal something the recipient did not already know?* (If No $\rightarrow$ Cap score at 3).
+1. **Part 1 (Capacity):** If a contributor has only 3 massive priorities, slots 4 and 5 must be marked `[UNALLOCATED CAPACITY - Reason]`. This incurs zero deduction.
+2. **Part 2 (Blockers):** Stating *"No known blockers in the reviewed period"* incurs zero deduction.
+3. **Part 3 (Escalations):** Stating *"No executive decision required in this cycle"* incurs zero deduction.
+4. **Part 4 (Weak Signals):** Stating *"No credible weak signal observed in this cycle [Scope surveyed: X, Y]"* incurs zero deduction.
+
+---
+
+## 🔍 3. Objective Deduction Table
+
+| Category | Defect | Penalty |
+|---|---|---|
+| **Capacity** | Priority reported without explicit `Trade-off / What dropped off` | -1.0 per item |
+| **Capacity** | "Trade-off" is vague or has no prior commitment / backlog reference | -0.5 per item |
+| **Capacity** | Effort percentages do not sum to 100% (including Unplanned/KTLO) | -0.5 |
+| **Blockers** | Blocker owner is a department/team rather than a named individual | -1.0 |
+| **Blockers** | Blocker missing days stalled or stall start date | -0.5 |
+| **Blockers** | Blocker not ranked by Blast Radius | -0.5 |
+| **Escalation** | Escalation is passive whining ("needs attention") rather than binary choice | -1.0 |
+| **Escalation** | Escalation missing hard calendar deadline or Cost of Inaction | -0.5 |
+| **Weak Signal** | Fails to separate `[OBSERVED FACT]` from `[INFERENCE]` | -1.0 |
+| **Weak Signal** | Generic industry PR / corporate news instead of frontier observation | -1.0 |
+| **Evidence** | Uncorroborated self-attestation not tagged `[SELF-ATTESTED]` | -0.5 per item |
+| **Swap Test** | Any item could belong to another company without modification | REJECT (-2.0) |
+
+---
+
+## 🚨 4. The Two-Strikes Rule
+
+If an author's draft fails the audit gate (Score $\le 3$ after 2 remediation rounds) across **two consecutive reporting cycles**:
+1. The system alerts both author and executive recipient with an explicit `[REPORTING CHANNEL FRICTION]` flag.
+2. The executive recipient must schedule an immediate 15-minute face-to-face calibration session.
+3. The session diagnoses the root cause:
+   * *Overload / WIP explosion* (author has too many competing demands to focus).
+   * *Tooling / Access barrier* (author cannot access necessary telemetry or data).
+   * *Reporting cynicism / apathy* (author disengaged from the alignment ritual).
