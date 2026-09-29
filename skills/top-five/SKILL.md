@@ -1,6 +1,6 @@
 ---
 name: top-five
-description: "NVIDIA-inspired Top-5 operational protocol for engineering leaders and AI agents. Enforces radical bandwidth flattening, 5 ruthless priorities with Action-Outcome & trade-offs, blocker escalation, and the AlexNet weak-signal radar."
+description: "NVIDIA-inspired Top-5 operational protocol for engineering leaders and AI agents. Use when drafting or auditing status reports, weekly engineering digests, sprint reviews, priority lists, executive briefings, or unblocking dependencies. Enforces radical bandwidth flattening, 5 ruthless priorities with Action-Outcome & trade-offs, blocker escalation, and the AlexNet weak-signal radar."
 metadata:
   short-description: "NVIDIA Top-5 operational protocol and weak-signal radar"
 ---
@@ -137,6 +137,6 @@ When a CTO operates this protocol:
 ## 📚 References & Resources
 - **NVIDIA Architectural History:** [references/nvidia_origins.md](references/nvidia_origins.md)
 - **Detailed Scoring Rubric & Anti-Patterns:** [references/rubric.md](references/rubric.md)
-- **Historical Example (AlexNet 2012):** [examples/nvidia_alexnet_historical.md](../../examples/nvidia_alexnet_historical.md)
-- **Fintech / CTO Turnaround Example:** [examples/fintech_cto_turnaround.md](../../examples/fintech_cto_turnaround.md)
-- **Autonomous Agent Sprint Example:** [examples/ai_agent_sprint_top5.md](../../examples/ai_agent_sprint_top5.md)
+- **Historical Example (AlexNet 2012):** [references/example_alexnet.md](references/example_alexnet.md)
+- **Fintech / CTO Turnaround Example:** [references/example_fintech_cto.md](references/example_fintech_cto.md)
+- **Autonomous Agent Sprint Example:** [references/example_ai_agent.md](references/example_ai_agent.md)

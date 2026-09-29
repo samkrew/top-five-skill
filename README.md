@@ -38,16 +38,6 @@ Install project-local (writes to `./.claude/skills/`):
 npx skills add samkrew/top-five-skill -p
 ```
 
-### Via One-Line Shell Installer
-
-Clone and run the bundled installer (auto-detects Claude Code, Codex CLI, and Hermes Agent):
-
-```bash
-git clone https://github.com/samkrew/top-five-skill.git /tmp/top-five-skill
-cd /tmp/top-five-skill && ./install.sh
-rm -rf /tmp/top-five-skill
-```
-
 ### Manual Install
 
 **Claude Code**:
@@ -134,12 +124,14 @@ top-five-skill/
 │       ├── SKILL.md
 │       └── references/
 │           ├── nvidia_origins.md
-│           └── rubric.md
+│           ├── rubric.md
+│           ├── example_alexnet.md
+│           ├── example_fintech_cto.md
+│           └── example_ai_agent.md
 ├── examples/
 │   ├── nvidia_alexnet_historical.md
 │   ├── fintech_cto_turnaround.md
 │   └── ai_agent_sprint_top5.md
-├── install.sh
 ├── LICENSE
 └── README.md
 ```
