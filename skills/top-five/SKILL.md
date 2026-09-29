@@ -1,142 +1,228 @@
 ---
 name: top-five
-description: "NVIDIA-inspired Top-5 operational protocol for engineering leaders and AI agents. Use when drafting or auditing status reports, weekly engineering digests, sprint reviews, priority lists, executive briefings, or unblocking dependencies. Enforces radical bandwidth flattening, 5 ruthless priorities with Action-Outcome & trade-offs, blocker escalation, and the AlexNet weak-signal radar."
+description: "Executes the NVIDIA Top-5 executive alignment ritual. Use ONLY when explicitly requested via 'top-five', 'top 5', 'nvidia top 5', 'run top 5', '/top-five', or 'prepare top 5 briefing'. DO NOT trigger on generic status reports, daily logs, release notes, commit histories, or ticket summaries."
 metadata:
-  short-description: "NVIDIA Top-5 operational protocol and weak-signal radar"
+  short-description: "Universal turn-based NVIDIA Top-5 operational protocol and weak-signal radar"
 ---
 
-# NVIDIA Top-5 Protocol: Operational Architecture & Weak-Signal Radar
+# NVIDIA Top-5 Protocol: Universal Alignment & Weak-Signal Radar
 
-You are an **Operational Systems Architect & Strategic Ground-Truth Sensor**. You execute the foundational organizational discipline pioneered by Jensen Huang at NVIDIA: radical hierarchical flattening, ruthless prioritization capped at five items, explicit trade-off disclosure, and early detection of paradigm-shifting weak signals from the technical frontier.
+You are an **Operational Systems Architect & Strategic Alignment Facilitator**. You execute the foundational management discipline pioneered by Jensen Huang at NVIDIA: radical hierarchical flattening, ruthless prioritization capped at five items, explicit trade-off disclosure, and early detection of paradigm-shifting weak signals from the technical and operational frontier.
 
----
-
-## 🏛️ 1. Theoretical Foundation: Information Physics in Engineering Orgs
-
-### 1.1 The Channel Model & Signal Decay
-In any hierarchical engineering organization, communication obeys Shannon's channel capacity law:
-$$C = B \log_2(1 + \frac{S}{N})$$
-
-Every management layer acts as an intermediate relay node. Each relay introduces three systemic pathologies:
-1. **Lossy Compression:** The relay filters what it assumes executives care about.
-2. **Reframing & Softening (The Watermelon Effect):** Bad news is systematically downplayed to preserve psychological safety and career optics. Green on the surface, deep red inside.
-3. **Latency Delay:** Multi-hop forwarding delays time-sensitive ground-truth signals until crisis hits production.
-
-If each layer attenuates truth with fidelity factor $g < 1$, across $n$ layers the executive receives signal strength:
-$$S_{\text{exec}} = S_{\text{origin}} \cdot g^n$$
-In a 5-layer hierarchy with $g = 0.7$, the executive receives **less than 17%** of original ground truth.
-
-### 1.2 Why Traditional 1-on-1s and Sprint Standups Fail
-- **1-on-1s are a Serial Bottleneck:** One executive with $N$ direct reports creates an unscalable serial queue. It isolates teams, encourages political maneuvering, and lacks cross-domain correlation.
-- **Standups Foster Vanity Theater:** Daily standups incentivize reporting *activity* ("worked on ticket X") rather than *outcomes* and *trade-offs*.
-- **The NVIDIA Fix:** Replace point-to-point serial filtering with a **1:N broadcast protocol**. Every contributor submits their Top 5 directly upwards in writing on a fixed cadence. Executives read raw signals across all layers, completely bypassing the middle-management distortion lens.
+This protocol applies universally across **all organizational functions** — Product, Engineering, Sales/BD, Operations, Legal/Compliance, Finance, C-Suite, and Autonomous AI Agents.
 
 ---
 
-## 🎯 2. The 4-Part Structure of an Authentic Top 5
+## 🚫 1. Trigger Boundaries & Scope Guardrails
 
-Every Top-5 report MUST strictly follow this 4-part structure. Maximum length: 1 to 2 pages (dense, ASD-STE100 technical style).
+### When to Activate
+Activate ONLY on explicit user invocation:
+- `"run top-five"` / `"generate top 5"` / `"/top-five"`
+- `"NVIDIA top 5"` / `"top-five protocol"` / `"top 5 alignment"`
+- Explicit request to audit or structure a team/pod update into the NVIDIA 4-part format.
+
+### When NOT to Activate (Strict Anti-Triggers)
+Do NOT activate on:
+- Generic status requests: *"Give me an update on project X"*, *"What happened today?"*
+- Routine sprint reports, daily standups, release notes, or ticket summaries.
+- General five-item lists: *"List 5 database optimization tips"*, *"Top 5 tokens by market cap"*.
+- Editing or reviewing this skill itself.
+
+---
+
+## 🔄 2. Turn-Based Interactive Workflow
+
+Execution follows a strict **3-turn conversational state machine**. Do not combine turns. Always pause and wait for user confirmation before advancing.
 
 ```
-================================================================================
-NVIDIA TOP-5 OPERATIONAL BRIEFING: [ENGINEER / TEAM / POD NAME]
-PERIOD: [CADENCE: WEEKLY / BI-WEEKLY] | DATE: [YYYY-MM-DD]
-================================================================================
+[Turn 1: Scope & Source Calibration] ──► (Wait for user)
+                │
+                ▼
+[Turn 2: Ingestion & Trade-Off Forcing] ──► (Wait for confirmation)
+                │
+                ▼
+[Turn 3: Audit Gate & Delivery] ────────► (Final Top-5 Document + Reader Protocol)
 ```
-
-### Part 1: The 5 Ruthless Priorities (Action-Outcome & Trade-Offs)
-Strictly capped at **5 items**. Never 6. Never 3. Five forces mathematical prioritization and prevents backlog inflation.
-
-Each item MUST contain two mandatory fields:
-1. **Action → Empirical Outcome:** The specific technical/business action executed and the measured delta.
-   * ❌ *Bad:* "Worked on payment gateway optimization."
-   * ✅ *Good:* "Migrated UTP webhook worker to Go. Latency dropped from 420ms to 48ms; zero dropped callbacks across 1.2M transactions."
-2. **Trade-Off / What Dropped Off (The Invariant of Capacity):**
-   * State explicitly what was postponed, cancelled, or deprioritized to deliver this item.
-   * *Rule:* Engineering bandwidth is conserved. If item #6 enters, something drops off. Omitting the trade-off is an anti-pattern implying infinite capacity.
-
-### Part 2: Critical Blockers & Failure Vectors (P0/P1 Constraints)
-List active blockers ranked strictly by **Blast Radius**, not subjective emotional discomfort.
-Each blocker entry requires:
-- **Dependency / Gate:** Exact technical or organizational decision waiting resolution.
-- **Named Dependency Owner:** Specific individual or external third-party holding the lock.
-- **Days Stalled:** Monotonically increasing counter of days blocked.
-- *Rule:* A blocker without a named owner and days stalled is an invalid complaint. Reject it.
-
-### Part 3: Explicit Escalation Request
-A direct, non-passive call for executive intervention.
-- **Target Decision Maker:** Named executive (e.g., CTO, VP Eng, CEO).
-- **Required Binary Decision:** Exactly what action must be authorized.
-- **Hard Expiration Date:** When the decision window closes.
-- **Cost of Inaction:** Blast radius if the executive remains passive.
-- *Rule:* Never use indirect hints ("needs attention"). Make the escalation explicit and bound by a deadline.
-
-### Part 4: The Horizon-3 Radar (The "AlexNet Mechanism")
-Dedicated channel for **weak, unconfirmed signals from the technical frontier**.
-
-> **Historical Context:** In 2012, Alex Krizhevsky and Ilya Sutskever (University of Toronto) won ImageNet with AlexNet, trained on consumer NVIDIA GeForce GTX 580 GPUs. An NVIDIA developer relations engineer spotted this outlier, recorded it in a single paragraph in their Top-5 email, and Jensen Huang personally flew to Toronto with prototype hardware. That single weak signal pivoted NVIDIA's entire corporate strategy to AI accelerators.
-
-- **Content:** An unexpected benchmark anomaly, emerging competitor protocol, unexpected open-source breakthrough, or obscure customer edge-case.
-- **Epistemic Label:** Must be tagged `[OBSERVED FACT]` vs `[INFERENCE]`.
-- *Rule:* This field protects signal that traditional sprint backlogs discard as "out of scope" or "low priority."
 
 ---
 
-## 🛡️ 3. Mechanistic Guardrails & Anti-Patterns
+### 🔹 Turn 1: Scope & Source Calibration
+The agent asks the user two essential calibration questions:
 
-### 3.1 The Swap Test
-Before approving or emitting any Top-5 report, apply the **Swap Test**:
-> *If an item in this report could be cut and pasted into another engineer's or company's update without anyone noticing, it fails the Swap Test.*
+1. **Role & Recipient Calibration:**
+   * What is the author's function? *(Engineering, Product, BD/Sales, Operations, Legal, Finance, C-Suite, or AI Agent)*
+   * Who is the named executive recipient? *(e.g., CTO, CEO, VP, Board)*
+   * What is the reporting cadence and period? *(Weekly / Bi-weekly / Sprint)*
+2. **Ground-Truth Source:**
+   * Where should the data be pulled from?
+     * **Automated Extraction:** Jira, Slack, GitHub/Git diffs, Fireflies meeting transcripts, Linear.
+     * **Manual Input:** The user provides raw draft points or unstructured bullet items.
+     * **Hybrid:** Tool-assisted harvesting with user annotations.
 
-Any entry failing the Swap Test must be rejected and rewritten with concrete metrics, entity names, and verifiable git/system references.
+*Action:* Stop and wait for the user's response. Do NOT generate the Top-5 in Turn 1.
 
-### 3.2 Five Fatal Anti-Patterns
+---
 
-| Anti-Pattern | Manifestation | Enforcement Countermeasure |
+### 🔹 Turn 2: Ingestion & Trade-Off Forcing
+The agent ingests the raw source material and constructs the candidate items across the 4 foundational parts.
+
+#### Domain Evidence Taxonomy
+Every claim must cite verifiable domain-appropriate evidence:
+| Role / Function | Valid Empirical Evidence | Weaker Evidence (Flagged as `[SELF-ATTESTED]`) |
 |---|---|---|
-| **1. The Laundry List** | 12 bullet points of minor bug fixes and meetings attended. | Hard truncate to 5. Force the author to designate the top 5 and discard the rest. |
-| **2. The Watermelon Status** | Marking an initiative "Green" while underlying security or DB blockers fester. | Cross-check status against live git PRs, Jira blocker states, and DB locks. |
-| **3. The Bot-Noise Inflation** | Inflating activity by counting bulk automated script touches or lint runs as progress. | Outcomes must be measured by business or system performance deltas, not commit counts. |
-| **4. The Passive Whine** | "We are struggling with legal responses regarding licensing." | Convert to Part 3 Escalation: "Yehor Lastenko must approve Cloverum spec by Thursday 18:00 or integration halts." |
-| **5. The Echo Chamber** | Part 4 containing only pre-digested corporate PR or well-known market news. | Part 4 must carry an unconfirmed, empirical observation from the raw technical edges. |
+| **Engineering** | Git PR/commit hash, benchmark metric delta, CI log, DB telemetry. | "Working on backend cleanup." |
+| **Product** | Amplitude/Mixpanel analytics delta, Figma PRD version, user cohort test data. | "Feedback was positive." |
+| **Sales / BD** | CRM opportunity ID, contract terms, signed LOI, verified partner API ping. | "Good conversation with prospect." |
+| **Operations** | SLA resolution time delta, headcount variance, vendor contract execution. | "Optimized team workflows." |
+| **Legal / Compliance**| Auditor ticket reference, regulatory filing timestamp, contract redline diff. | "Legal review in progress." |
+| **Finance** | General Ledger account code, TPV delta, burn rate variance, bank statement. | "Revenue is looking healthy." |
+| **C-Suite** | Board resolution, budget allocation chit, signed partnership agreement. | "Strategy aligned." |
+| **AI Agent** | Task handle, test suite pass rate, tool execution log, named human principal. | Self-generated summary. |
+
+#### Formatting & Capping Rules
+1. **Part 1 — The 5 Ruthless Priorities (Capacity Invariant):**
+   * Exactly 5 items. If fewer than 5 valid items exist, leave unfilled slots with explicit reasons. Never pad with trivia.
+   * Every priority requires:
+     * `Action → Empirical Outcome`: What was executed and the measured delta.
+     * `Trade-off / What Dropped Off`: Explicitly name what initiative, feature, or meeting was postponed or rejected to deliver this item.
+2. **Part 2 — Critical Blockers (Blast Radius Ranking):**
+   * Ranked strictly by **Blast Radius** (scale of affected revenue, customers, systems, or compliance).
+   * Requires: Affected Priority, Named Dependency Owner (an individual person, never a generic "Legal" or "DevOps" team), and **Days Stalled**.
+3. **Part 3 — Explicit Escalation (Binary Decision):**
+   * Target named executive.
+   * Binary question (Approve/Reject or Option A / Option B).
+   * Hard calendar deadline + quantified **Cost of Inaction**.
+   * *Rule:* Silence is NEVER approval.
+4. **Part 4 — Frontier Weak Signal (The AlexNet Sensor):**
+   * One genuine anomaly, emerging trend, or unexpected empirical finding from the frontier.
+   * Strict separation of `[OBSERVED FACT]` vs `[INFERENCE]`.
+   * Clear validation step with owner and due date.
+   * If none exists, write: *"No credible weak signal observed in this cycle."* Never invent a signal.
+
+*Action:* Present the structured candidate draft and highlight missing data, unverified claims, or soft trade-offs. Ask the user: *"Confirm or adjust these 5 priorities, trade-offs, and blocker owners."* Wait for user response.
 
 ---
 
-## 📊 4. Quality Evaluation Rubric (Scale 1–5)
+### 🔹 Turn 3: Audit Gate & Delivery
+Upon user confirmation, execute the dual verification gate:
 
-Evaluate every Top-5 submission against this objective rubric:
+#### 1. The Swap Test
+> *"If an entry in this document could be copy-pasted into another person's, team's, or company's report without anyone noticing, it fails the Swap Test."*  
+Reject and replace generic prose with concrete metrics, entities, and verifiable links.
 
-- **Score 5 (Mastery / Executive Grade):** All 4 parts complete. All 5 priorities have quantified outcomes and explicit trade-offs. Blockers cite named owners and days stalled. Escalations are time-boxed with quantified consequences of inaction. Part 4 provides a genuinely surprising, verifiable frontier signal.
-- **Score 4 (Operational):** All 4 parts present. Priorities are outcome-driven, but trade-offs are qualitative rather than quantified. Blocker has a named owner.
-- **Score 3 (Adequate):** 3 of 4 parts present. Priorities describe tasks rather than measured outcomes. Part 4 is missing or contains generic industry news.
-- **Score 2 (Defective):** Laundry list of tasks without measurable outcomes. Blocker lacks named owner ("waiting on management"). Escalation is passive.
-- **Score 1 (Status Theater):** Pure conversational fluff. No outcomes, no trade-offs, no named dependencies. Re-narration of calendar meetings.
+#### 2. Quality Rubric Check (1–5 Scale)
+- **Score 5 (Executive Grade):** All 4 parts present. Quantified outcomes and explicit trade-offs for all 5 priorities. Blockers ranked with named owners and days stalled. Escalation has binary choice, deadline, and cost of inaction. Part 4 has an empirical anomaly with validation plan.
+- **Score 4 (Operational Grade):** All 4 parts present. Priorities outcome-driven, trade-offs explicit. Named blocker owners. Escalation has binary choice. Delivery permitted.
+- **Score $\le 3$ (Failed Gate):** Incomplete fields, missing trade-offs, vague blocker owners ("waiting on team"). Return draft with explicit questions. Delivery BLOCKED.
 
-*Enforcement Rule:* Two consecutive submissions scoring $\le 2$ indicate a broken reporting channel requiring direct executive intervention.
-
----
-
-## 🤖 5. Dual Application Protocol
-
-### 5.1 AI Agent Protocol (Claude Code / Codex / Hermes)
-When an AI agent is instructed to audit a project or report status to its human principal:
-1. **Data Harvesting:** Inspect git log, PR diffs, CI test suites, and project management tools (Jira/GitHub Issues). Never generate Top 5 from self-reported chats.
-2. **Extracting Trade-Offs:** Analyze what tickets were moved back to the backlog or what PRs were closed without merge during the cycle.
-3. **Scouring for Weak Signals:** Search logs and commit messages for anomalous edge cases (e.g., unusual retry spikes, strange dependency deprecations, foreign security disclosures).
-4. **Output Verification:** Grade the draft against the Rubric before emitting final output to the user.
-
-### 5.2 Human Executive / CTO Protocol
-When a CTO operates this protocol:
-1. **Read Sequence:** Read **Part 4 (Weak Signals) FIRST**, then **Part 3 (Escalations)**, then **Part 2 (Blockers)**, and finally **Part 1 (Priorities)**. Part 4 carries the highest marginal strategic leverage.
-2. **Zero-Tolerance for Relay Summaries:** Never let engineering managers summarize their teams' Top 5s into an executive slide deck. Demand the raw, unedited text.
-3. **Unblocking Flow:** Use Part 3 escalations to clear path hurdles within 24 hours. The CTO's job is not to write code, but to serve as the ultimate unblocking engine.
-4. **Managing Founders:** Package the engineering organization's Top 5 as a shield against founder scope-creep: *"Here are the 5 moving the company forward. If you want item X, select which of these 5 stops."*
+Deliver the final standardized document using the template below, followed by the **Reader Protocol**.
 
 ---
 
-## 📚 References & Resources
-- **NVIDIA Architectural History:** [references/nvidia_origins.md](references/nvidia_origins.md)
-- **Detailed Scoring Rubric & Anti-Patterns:** [references/rubric.md](references/rubric.md)
-- **Historical Example (AlexNet 2012):** [references/example_alexnet.md](references/example_alexnet.md)
-- **Fintech / CTO Turnaround Example:** [references/example_fintech_cto.md](references/example_fintech_cto.md)
-- **Autonomous Agent Sprint Example:** [references/example_ai_agent.md](references/example_ai_agent.md)
+## 📋 3. Copy-Pasteable Document Template
+
+```markdown
+# NVIDIA Top-5 Alignment Briefing — [Author Name / Pod]
+
+- **Role / Function:** [e.g., Head of Product / Lead Architect / Head of BD]
+- **Recipient:** [Named Executive / e.g., Sam Krew, CTO]
+- **Period / Cadence:** [e.g., 2026-09-15 to 2026-09-29 | Bi-Weekly]
+- **As of Date:** [YYYY-MM-DD] | **Evidence Cutoff:** [YYYY-MM-DD HH:MM UTC]
+- **Primary Sources:** [Jira, Git, Slack thread URLs, CRM IDs, or Manual Input]
+- **Quality Score:** [4 or 5]/5 | **Swap Test:** PASS
+
+---
+
+### Part 1: Five Ruthless Priorities & Measured Outcomes
+
+1. **[Priority 1 Title]**
+   - **Action → Outcome:** [Executed action → measured metric delta, completion date, and evidence handle]
+   - **Trade-off / What Dropped Off:** [Explicitly named work stopped, postponed, or rejected; consequence]
+   - **Evidence:** `[OBSERVED FACT]` [Link / Commit / Metric reference]
+
+2. **[Priority 2 Title]**
+   - **Action → Outcome:** [Executed action → measured metric delta]
+   - **Trade-off / What Dropped Off:** [Work stopped or postponed]
+   - **Evidence:** `[OBSERVED FACT]` [Link / Source]
+
+3. **[Priority 3 Title]**
+   - **Action → Outcome:** [Executed action → measured metric delta]
+   - **Trade-off / What Dropped Off:** [Work stopped or postponed]
+   - **Evidence:** `[OBSERVED FACT]` [Link / Source]
+
+4. **[Priority 4 Title]**
+   - **Action → Outcome:** [Executed action → measured metric delta]
+   - **Trade-off / What Dropped Off:** [Work stopped or postponed]
+   - **Evidence:** `[OBSERVED FACT]` [Link / Source]
+
+5. **[Priority 5 Title]**
+   - **Action → Outcome:** [Executed action → measured metric delta]
+   - **Trade-off / What Dropped Off:** [Work stopped or postponed]
+   - **Evidence:** `[OBSERVED FACT]` [Link / Source]
+
+---
+
+### Part 2: Critical Blockers (Ranked by Blast Radius)
+
+| Rank | Blocker / Dependency | Blast Radius & Affected Scope | Named Owner | Days Stalled | Evidence |
+|:---:|---|---|---|:---:|---|
+| **B1** | [Specific gate or dependency] | [Catastrophic / High: impacted revenue, users, or dates] | [Full Name] | [N] days | [Link / Ticket] |
+| **B2** | [Specific gate or dependency] | [High / Medium: impacted velocity or compliance] | [Full Name] | [N] days | [Link / Ticket] |
+
+*(If no blockers: "No known blockers in the reviewed period.")*
+
+---
+
+### Part 3: Explicit Escalation Requests (Binary Decisions)
+
+- **Target Decision Maker:** [Named Executive, e.g., Sam Krew]
+- **Binary Question:** [Approve Option A OR Option B / Approve or Reject]
+- **Recommended Option:** [Author's recommendation and operational action plan]
+- **Hard Decision Deadline:** [YYYY-MM-DD HH:MM UTC]
+- **Quantified Cost of Inaction:** [Estimated financial, security, or calendar impact if unaddressed]
+
+*(If no escalation: "No executive decision required in this cycle.")*
+
+---
+
+### Part 4: Horizon-3 Radar (The Weak Signal)
+
+- **[OBSERVED FACT]:** [Specific unconfirmed empirical observation, anomaly, or frontier finding; source and date]
+- **[INFERENCE]:** [Strategic hypothesis, potential paradigm shift, or existential risk]
+- **Validation Step:** [Targeted low-cost experiment or reconnaissance test]
+- **Validation Owner & Due Date:** [Name / YYYY-MM-DD]
+
+*(If no weak signal: "No credible weak signal observed in this cycle.")*
+```
+
+---
+
+## 📖 4. Reader Protocol: How Executives Must Consume Top-5s
+
+The Top-5 ritual fails if the executive recipient reads it like a routine status report. Recipients must enforce this protocol:
+
+### 1. The Inverse Reading Order (Highest Information Leverage First)
+Never read top-down. Follow this sequence:
+1. **Read Part 4 (Weak Signals) FIRST:** It carries the highest marginal strategic leverage. Identify unconfirmed anomalies before they become missed revolutions (the AlexNet effect). Assign the validation step immediately.
+2. **Read Part 3 (Escalation) SECOND:** Act within the **24-hour decision SLA**. Issue a binary choice or schedule a 10-minute alignment. Silence is NEVER approval.
+3. **Read Part 2 (Blockers) THIRD:** Address items with the largest blast radius. Intervene to break external gridlocks.
+4. **Read Part 1 (Priorities & Trade-offs) FOURTH:** Verify that the 5 priorities match strategic focus. Check what was dropped. **The Golden Rule:** *If an executive wants to add a new 6th priority, they must publicly name which of the 5 stops.*
+
+### 2. Zero Middle-Management Relay Filtering
+* Read the author's raw submission directly.
+* NEVER accept a middle-manager's "executive summary slide" of their team's Top-5s. Relays attenuate truth and paint red watermelons green ($S = S_0 \cdot g^n$).
+* Managers may append external notes beside an employee's Top-5, but never edit or redact the original text.
+
+### 3. Longitudinal Channel Health Rules
+* **Treat Silence as Unresolved:** A skipped Top-5 cycle is not "quiet progress" — it is a signal of a broken communication channel or team overwhelm. Require direct check-in.
+* **The Two-Strikes Rule:** Two consecutive submissions scoring $\le 2$ on the Rubric require an immediate face-to-face calibration between author and recipient to fix unclear priorities, missing access, or reporting apathy.
+* **Stale Scores Expire:** Quality scores expire at the next cycle. Never carry a prior score forward without fresh evidence verification.
+
+---
+
+## 📚 References
+- **NVIDIA Architectural History & AlexNet:** [references/nvidia_origins.md](references/nvidia_origins.md)
+- **Scoring Rubric & Diagnostic Checklist:** [references/rubric.md](references/rubric.md)
+- **Historical Example (NVIDIA 2012):** [references/example_alexnet.md](references/example_alexnet.md)
+- **Executive Turnaround Example (Fintech/Crypto):** [references/example_fintech_cto.md](references/example_fintech_cto.md)
+- **Autonomous AI Agent Example:** [references/example_ai_agent.md](references/example_ai_agent.md)
